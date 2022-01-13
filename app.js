@@ -19,8 +19,6 @@ mongoose.connection.once('open', () => {
 //Connection
 app.use(passport.initialize());
 passport2(passport)
-// require("./configs/passport")(passport);
-
 
 
 app.use('/api/user/auth',userAuth);

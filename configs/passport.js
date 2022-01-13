@@ -14,7 +14,6 @@ opts.secretOrKey = process.env.SecretNumber;
 let passport2 = () =>{
   passport.use(
     new JwtStrategy(opts , (jwt_payload , done)=>{
-    console.log(jwt_payload , "check")
       User.findById(jwt_payload._id).then((user)=>{
         if(user){
           return done(null , user)
